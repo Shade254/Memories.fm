@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Memories.fm",
-  "description": "Chrome extension for Last.fm service. Let's you look back in time - what you have been listening to at this time in the past months and years.",
+  "description": "Extension for Last.fm service. Let's you look back in time - what you have been listening to in the past months and years.",
   "version": "0.0.1",
   "icons":{
     "16": "images/icon16.png",
