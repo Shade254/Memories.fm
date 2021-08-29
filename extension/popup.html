@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Memories.fm</title>
+    <script src="js/popup.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="defaultContainer">
+        <div id="controlSection">
+            <label class="controlLabel">Pick a date</label>
+            <label class="controlLabel">Daytime</label>
+            <label class="controlLabel" id="modeLabel">Mode: Step</label>
+            <input type="date" id="dateSelector" name="dateSelector">
+            <input type="time" id="timeSelector" name="timeSelector">
+            <label class="switch" id="modeSelector">
+                    <input type="checkbox" id="modeCheckBox">
+                    <span class="slider round"></span>
+                </label>
+            <input type="text" id="userInput" placeholder="Enter your Last.fm user name">
+            <input type="button" value="Save" id="saveUser">
+            <div id="stepsSection">
+                <label id="stepsLabel" class="controlLabel">Step:</label>
+                <select id="stepsSelector">
+                        <option value="hour">Hour</option>
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                    </select>
+            </div>
+        </div>
+        <hr>
+        <div id="mainSection">
+            <input class="viewButton" type="button" id="prevButton">
+            <div class="scroll" id="contentSection">
+            </div>
+            <input class="viewButton" type="button" id="nextButton">
+        </div>
+        <hr>
+        <div id="aboutSection">
+            <p>Version 0.0.1 (09/2021)</p>
+            <p>by <a id="fundMe">Miro Matocha</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

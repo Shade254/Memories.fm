@@ -1,0 +1,281 @@
+hr {
+  border: 1px solid #B90101;
+  border-radius: 1px;
+  width: 98%;
+}
+
+div.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.dividerLabel {
+  color: grey;
+}
+
+.songName {
+  font-size: 15px;
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.songAuthor {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.songDatetime {
+  font-style: italic;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.songCover {
+  width: 40px;
+  height: 40px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.songTile {
+  display: grid;
+  grid-template-columns: auto 40px 40px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  background-color: #efefef;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.activeSong {
+  background-color: #B90101;
+  color: white;
+}
+
+#contentSection {
+  display: inline-block;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#userInput {
+  border-radius: 3px;
+  border-width: 1px;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#saveUser {
+  background-color: #B90101;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#defaultContainer {
+  width: 450px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.controlLabel {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#stepsSection {
+  display: flex;
+  align-items: center;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#stepsSelector {
+  width: 88%;
+  margin-left: auto;
+}
+
+.viewButton {
+  border: none;
+  border-radius: 13px;
+  background-color: white;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+.viewButton:disabled,
+.viewButton[disabled] {
+  background-color: white;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.viewButton:hover {
+  background-color: #efefef;
+}
+
+.viewButton:active {
+  background-color: lightgrey;
+}
+
+#prevButton {
+  background-image: url("../images/control_arrow_left.png");
+}
+
+#nextButton {
+  background-image: url("../images/control_arrow_right.png");
+}
+
+#mainSection {
+  display: grid;
+  height: 380px;
+  grid-template-columns: 30px auto 30px;
+  grid-template-rows: auto;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+}
+
+#controlSection {
+  display: grid;
+  grid-template-columns: auto auto 60px;
+  grid-template-rows: auto auto auto auto;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+}
+
+#dateSelector {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#timeSelector {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#modeSelector {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #B90101;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #B90101;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#aboutSection {
+  color: grey;
+  text-align: center;
+  margin: 1px;
+  font-size: 7px;
+}
+
+a:hover,
+a:active {
+  background-color: hotpink;
+  text-decoration: underline;
+}
